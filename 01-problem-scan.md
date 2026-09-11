@@ -12,7 +12,7 @@ Dùng **4 Lenses** quét qua vận hành của các công ty thành viên Vingro
 
 | # | Subsidiary | Lens | Mô tả ngắn bài toán |
 |---|------------|------|---------------------|
-| 1 | **VinFast** | Pain từ người khác | Dịch vụ sạc xe điện: tài xế không muốn canh thời gian sạc để rút súng sạc. Xe sạc xong chiếm dụng trụ gây tắc nghẽn trạm và phát sinh phí phạt. Cần hệ thống điều phối kết thúc sạc và luân chuyển xe sang điểm đỗ an toàn. |
+| 1 | **VinFast** | Pain từ người khác | Dịch vụ sạc xe điện và đỗ xe thông minh: tài xế không muốn canh thời gian sạc để rút súng sạc. Xe sạc xong chiếm dụng trụ gây tắc nghẽn trạm và phát sinh phí phạt. Cần hệ thống điều phối kết thúc sạc và luân chuyển xe sang điểm đỗ an toàn. |
 | 2 | **Xanh SM** | Lặp lại | Xử lý các vấn đề cơ bản và lặp đi lặp lại của tài xế và khách hàng như phản hồi ban đầu khi tài xế báo cáo sự cố, tai nạn giao thông trên đường. |
 | 3 | **VinFast** | AI-upgrade | Trợ lý ảo trên xe tư vấn thông minh thời điểm sạc và tự động điều hướng đến trạm sạc tối ưu khi đang lái xe dựa trên lượng pin còn lại và tình trạng trụ trống thực tế. |
 | 4 | **Vinhomes** | AI-upgrade | Hệ thống phân loại và route tự động các phản hồi/khiếu nại của cư dân trên App Vinhomes Resident (CSKH phản hồi rập khuôn, mất 12 tiếng). |
@@ -42,21 +42,20 @@ Chọn top 3 bài toán từ danh sách Phase 1: **Card #1 (VinFast Dịch vụ 
 │                                                             │
 │ Workflow thủ công hiện tại (5 bước):                        │
 │   1. Tài xế cắm sạc nhanh và rời xe đi ăn uống/làm việc     │
-│   ──> 2. Canh giờ sạc thủ công bằng mắt hoặc đặt chuông     │
-│   ──> 3. Phát hiện sạc xong, nhân viên đi tìm và gọi chủ xe │
-│   ──> 4. Tài xế quay lại hoặc nhân viên valet dời xe ra bãi │
-│   ──> 5. Bàn giao xe và xử lý khiếu nại phí chiếm trụ quá giờ│
+│   ──> 2. Canh giờ sạc dựa trên thông tin ứng dụng           │
+│   ──> 3. Phát hiện sạc xong, chủ xe nhận thông tin          │
+│   ──> 4. Tài xế quay lại dời xe ra bãi                      │
+│   ──> 5. xử lý  phí chiếm trụ quá giờ                       │
 │                                                             │
-│ Bước nào tốn thời gian/lỗi nhất? Bước 3 & 4 (⏱ 15-20 min)    │
-│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2, 3, 4          │
-│ (AI dự báo thời điểm sạc xong qua Telematics -> Tìm ô đỗ    │
-│  trống -> Soạn draft tin nhắn điều phối kèm ủy quyền Valet) │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 3 & 4 (⏱ 15-20 min)   │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước  3, 4            │
+│ ( Tìm ô đỗ trống -> Di chuyển xe tự động đến chỗ đỗ trống)  │
 │                                                             │
-│ Đo thành công bằng gì (Metric có số)?                        │
+│ Đo thành công bằng gì (Metric có số)?                       │
 │ 1. Giảm thời gian chiếm trụ sau khi sạc xong từ 20m -> < 2m.│
 │ 2. Tăng công suất quay vòng trụ trong giờ cao điểm thêm 20%.│
-│                                                             │
-│ Quick Architecture: [ ] No AI  [ ] Rule  [x] LLM  [ ] Agent │
+│ 3. Doanh thu dịch vụ gia tăng                               │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [] LLM  [x] Agent │
 └─────────────────────────────────────────────────────────────┘
 ```
 
