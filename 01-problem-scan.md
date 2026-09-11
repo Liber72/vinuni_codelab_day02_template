@@ -139,6 +139,6 @@ Nhóm quyết định chọn bài toán **"Card #1 — VinFast / V-GREEN Dịch 
 * **So với Card #2 (Xanh SM Hỗ trợ sự cố khẩn cấp):** Xử lý sự cố va chạm và tai nạn có liên quan đến tính mạng, hồ sơ công an và quy định bồi thường bảo hiểm phức tạp. Ranh giới an toàn (Operational Boundary) của AI trong mảng này khó cô lập và kiểm chứng trong phạm vi một bài lab kỹ thuật.
 * **So với Card #3 (VinFast Trợ lý lộ trình trạm sạc):** Bài toán chủ yếu dựa trên thuật toán tối ưu hóa định tuyến bản đồ (Route Optimization / Dijkstra algorithm) kết hợp telemetry, vốn phần lớn có thể giải quyết tốt bằng rule-based truyền thống mà chưa khai thác tối đa thế mạnh xử lý ngôn ngữ và phối hợp đa bên của LLM.
 * **Lý do chọn Card #1:** 
-  1. **Tác động kinh doanh trực tiếp (High ROI):** Giải quyết bài toán nhức nhối nhất của hạ tầng xe điện VinFast — tình trạng "chiếm trụ sau khi sạc đầy" (idle chargers). Tăng trực tiếp doanh thu bán điện sạc và giảm chi phí đầu tư thêm trụ mới.
+  1. **Tác động kinh doanh trực tiếp (High ROI):** Giải quyết bài toán nhức nhối nhất của hạ tầng xe điện VinFast — tình trạng "chiếm trụ sau khi sạc đầy". Tăng trực tiếp doanh thu bán điện sạc và giảm chi phí đầu tư thêm trụ mới, mặt bằng mới.
   2. **Dữ liệu rõ ràng (High AI Readiness):** Có sẵn luồng dữ liệu Telematics sạc (SoC %, dòng sạc, công suất, trạng thái trụ) và trạng thái ô đỗ xe.
-  3. **Ranh giới an toàn rõ ràng (Strict Operational Boundary):** Dễ dàng thiết lập cơ chế Human-in-the-loop (HITL) với thẻ `[DRAFT_ONLY]` và ủy quyền số của tài xế, hoàn toàn phù hợp để prototype và kiểm thử ranh giới an toàn bằng LLM.
+

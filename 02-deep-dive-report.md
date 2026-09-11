@@ -83,8 +83,8 @@ Hiện tại, tại các trạm sạc nhanh VinFast và các Hub sạc tập tru
 ### C. Chi tiết các bước tích hợp AI & Cơ chế Phòng thủ (Safety & Fallback)
 
 1. **🔵 AI Step — Predictive Charging Model & Slot Finder:**
-   - Hệ thống theo dõi đường cong công suất sạc (Charging Curve). Khi pin chạm mức 75–80%, tốc độ sạc giảm dần (tapering), AI tính toán chính xác thời điểm đạt mục tiêu sạc trong 5–7 phút tới.
-   - AI đồng thời truy vấn camera giám sát bãi xe, hoặc hệ thống đỗ xe liên kết để chỉ định sẵn ô đỗ trống gần nhất (ví dụ: Ô đỗ P-08, cách trụ sạc 20m).
+   - Hệ thống theo dõi đường cong công suất sạc (Charging Curve). Khi pin chạm mức 75–80%, tốc độ sạc giảm dần (tapering), hệ thống tính toán chính xác thời điểm đạt mục tiêu sạc trong 5–7 phút tới.
+   - Hệ thống đồng thời truy vấn camera giám sát bãi xe, hoặc hệ thống đỗ xe liên kết để chỉ định sẵn ô đỗ trống gần nhất (ví dụ: Ô đỗ P-08, cách trụ sạc 20m).
 
 2. **🔵 AI Step — Generative Notification Draft:**
    - LLM sinh ra thông báo súc tích, chuyên nghiệp:
